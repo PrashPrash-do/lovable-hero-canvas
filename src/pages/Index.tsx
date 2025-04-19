@@ -1,7 +1,6 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, FileText, PenLine, Send } from "lucide-react";
+import { CheckCircle, FileText, PenLine, Send, CreditCard, Mail, Phone } from "lucide-react";
 
 const Index = () => {
   return (
@@ -103,6 +102,59 @@ const Index = () => {
                     Receive your polished, plagiarism-free paper ready for submission
                   </p>
                   <div className="h-1 w-16 bg-versapro-red rounded-full mt-4"></div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact & Payment Section */}
+      <div className="bg-versapro-gray py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Details */}
+            <Card className="border-none shadow-lg">
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-bold text-versapro-charcoal mb-6">Contact Us</h2>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <Phone className="h-6 w-6 text-versapro-red" />
+                    <div>
+                      <p className="font-semibold text-versapro-charcoal">Phone</p>
+                      <p className="text-versapro-charcoal/70">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <Mail className="h-6 w-6 text-versapro-red" />
+                    <div>
+                      <p className="font-semibold text-versapro-charcoal">Email</p>
+                      <p className="text-versapro-charcoal/70">support@versapro.com</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Payment Options */}
+            <Card className="border-none shadow-lg">
+              <CardContent className="p-8">
+                <h2 className="text-3xl font-bold text-versapro-charcoal mb-6">Secure Payment</h2>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <CreditCard className="h-6 w-6 text-versapro-red" />
+                    <div>
+                      <p className="font-semibold text-versapro-charcoal">Accepted Payment Methods</p>
+                      <p className="text-versapro-charcoal/70">Visa, Mastercard, American Express</p>
+                    </div>
+                  </div>
+                  <div className="mt-6">
+                    <Button 
+                      className="bg-versapro-red hover:bg-versapro-red/90 text-white text-lg px-8 py-6 rounded-full w-full"
+                    >
+                      Make Payment
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>

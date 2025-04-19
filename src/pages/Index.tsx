@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, FileText, PenLine, Send, CreditCard, Mail, Phone } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import CustomerDetailsForm from "@/components/CustomerDetailsForm";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-versapro-beige">
+      <Navbar />
+      
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -105,6 +109,15 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </div>
+
+      {/* Customer Details Section */}
+      <div className="bg-white py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <CustomerDetailsForm />
           </div>
         </div>
       </div>

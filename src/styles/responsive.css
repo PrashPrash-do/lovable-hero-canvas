@@ -11,10 +11,34 @@
 
   .hero-image {
     order: -1;
+    margin-bottom: 2rem;
   }
 
   .nav-list {
     justify-content: center;
     flex-wrap: wrap;
+  }
+  
+  .contact-payment .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
   }
 }

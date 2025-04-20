@@ -1,4 +1,3 @@
-
 // Form validation and submission
 document.getElementById('customerForm').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -41,7 +40,7 @@ function isValidPhone(phone) {
   return phoneRegex.test(phone);
 }
 
-// Smooth scrolling for navigation links
+// Smooth scrolling with animation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
@@ -55,7 +54,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Make navbar sticky on scroll
+// Animate step cards on scroll
+const stepCards = document.querySelectorAll('.step-card');
+const observerOptions = {
+  threshold: 0.2,
+  rootMargin: '0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+stepCards.forEach(card => {
+  observer.observe(card);
+});
+
+// Sticky navbar with hide/show on scroll
 const navbar = document.querySelector('.navbar');
 let lastScroll = 0;
 
